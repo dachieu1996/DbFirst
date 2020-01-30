@@ -10,7 +10,12 @@ namespace DbFirst
     {
         static void Main(string[] args)
         {
-
+            var context = new PlutoEntities();
+            var courses = context.GetCourses();
+            foreach (var course in courses)
+            {
+                Console.WriteLine(course.Title + "\n");
+            }
         }
     }
 }
